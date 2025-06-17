@@ -36,7 +36,7 @@ A robust Blog API built with NestJS, featuring user authentication, role-based a
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Mohmed-saleh1/nm8-task.git
    cd blog-api
    ```
 
@@ -47,16 +47,17 @@ A robust Blog API built with NestJS, featuring user authentication, role-based a
 
 3. Create a `.env` file in the root directory:
    ```env
-   DATABASE_URL=postgresql://username:password@localhost:5432/blog_db
-   JWT_SECRET=your_jwt_secret_here
+    DB_HOST=
+    DB_PORT=
+    DB_USER=
+    DB_PASS=
+    DB_NAME=
+    DB_SYNC=
+    WT_EXPIRATION=
+    JWT_SECRET=your_jwt_secret_here
    ```
 
-4. Run database migrations:
-   ```bash
-   npm run migration:run
-   ```
-
-5. Start the development server:
+4. Start the development server:
    ```bash
    npm run start:dev
    ```
@@ -178,18 +179,7 @@ Access the Swagger documentation at `http://localhost:3000/api` to explore all a
    DELETE /posts/1
    Authorization: Bearer <jwt_token>
    ```
-
-## Testing
-
-Run the test suite:
-```bash
-npm run test
-```
-
-Run e2e tests:
-```bash
-npm run test:e2e
-```
+ 
 
 ## Project Structure
 
@@ -205,14 +195,4 @@ src/
 └── main.ts             # Application entry point
 ```
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+ 
